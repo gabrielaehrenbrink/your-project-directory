@@ -39,6 +39,11 @@ class Diary():
         self.todo_list.entry_todo(todo)
         if todo in self.diary_entry:
             return "You have a todo item in your Diary"
+    
+    def my_task(self, todo):
+        self.todo_list.entry_todo(todo)
+        if todo in self.diary_entry:
+            return todo
       
         
     def add_contacts(self, entry, contact):
@@ -47,6 +52,11 @@ class Diary():
         self.add(DiaryEntry(contact_info))
         return contact_info
     
+    def get_number(self, name):
+        if name in self._contacts._contacts:
+            return self._contacts._contacts[name]
+        else:
+            return f"Contact {name} not in contacts"
 
       
     
