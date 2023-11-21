@@ -13,3 +13,6 @@ class CatFacts:
     
 
 
+import requests
+cat_facts = CatFacts(requests)
+print(cat_facts.provide())
